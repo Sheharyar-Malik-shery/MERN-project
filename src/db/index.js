@@ -6,6 +6,7 @@ const datebsae_connection = async()=>{
      console.log("dataBase connected Successfully", `HOST IS ${connected.connection.host}`)
     }catch(error){
      console.log(`Error While connecting DataBAse${error.message}`);
+     throw error
     }
 }
 export  {datebsae_connection}
