@@ -12,7 +12,7 @@ const uploadfile = async(filepath)=>{
         if(!fs.existsSync(filepath)) {
             throw new Error("File does not exist at the specified path");
         }
-        const response = await cloudinary.uploader.upload("filepath",{
+        const response = await cloudinary.uploader.upload(filepath,{
             resource_type: "auto",
             folder: "youtube-app"
         })
