@@ -17,6 +17,7 @@ const uploadfile = async(filepath)=>{
             folder: "youtube-app"
         })
         console.log("File uploaded successfully:", response.url);
+        fs.unlinkSync(filepath);
         return response
     }catch(error){
         fs.unlinkSync(filepath); // Delete the file from local storage
